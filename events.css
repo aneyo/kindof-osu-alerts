@@ -1,17 +1,12 @@
+/*
+  osu! UI font, Aller
+  ...
+  Aller isn't so great? are you kidding me?
+  sorry
+  */
 @import url(https://aneyo.github.io/kindof-osu-alerts/fonts/Aller.css);
 
-@keyframes old {
-  from {
-    transform: translateY(100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes new {
-  /* from 200% to 0 */
+@keyframes show {
   0% {
     transform: translateX(200%);
   }
@@ -32,7 +27,15 @@
     transform: translateX(0%);
   }
 }
+@keyframes move {
+  from {
+    transform: translateY(100%);
+  }
 
+  to {
+    transform: translateY(0);
+  }
+}
 @keyframes die {
   0% {
     opacity: 1;
@@ -44,6 +47,7 @@
 }
 
 body {
+  /* Can't overwrite without !important cause this is the last stylesheet to load */
   padding: 0 !important;
   margin: 0 !important;
   font-family: "Aller", sans-serif;
@@ -62,23 +66,22 @@ body {
 
 .osu {
   --accent: #dfdfdf;
-  width: 285px;
   max-width: 285px;
   min-width: 285px;
   padding-top: 5px;
   opacity: 0;
 }
 
-.osu.new,
-.osu.old {
+#alertu * {
   opacity: 1;
 }
 
 #old-ones > .osu > .notification {
-  animation: 250ms old;
+  animation: 250ms move;
+  -webkit-animation: 250ms move;
 }
 
-.osu[dispose] {
+.osu.is-dying {
   animation: die 250ms ease-in-out 0s 1 normal forwards;
 }
 
@@ -87,23 +90,32 @@ body {
   color: #fafafa;
   font-size: 14px;
   overflow-wrap: break-word;
-  background: linear-gradient(#0000009c 0%, #000000e0 50%);
-  border: 1px solid var(--accent);
+  background: linear-gradient(#000000ad 0%, #000000e8 50%);
+  border: 2px solid var(--accent);
   border-radius: 10px;
   padding: 8px 24px 12px 6px;
   box-shadow: 0 0 10px #00000075;
-  animation: 1.5s new;
+  animation: 1.5s show;
+  -webkit-animation: 1.5s show;
 }
 
-.notification.export,
+/*
+  You can change overwrites for events here
+  feel free to colorize everything you want
+  because these ones are not accurate at all :^(
+
+  --accent - border color, by default #fafafa
+*/
+
 .osu.subscription,
 .osu.bits,
 .osu.raid,
 .osu.host {
+  /* Screenshots, exports, new messages */
   --accent: #872bd7;
 }
 
-.notification.online,
 .osu.follow {
+  /* Someone is online, and that's it? */
   --accent: #6e8538;
 }
