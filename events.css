@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Allerta");
+@import url(https://aneyo.github.io/kindof-osu-alerts/fonts/Aller.css);
 
 @keyframes old {
   from {
@@ -46,7 +46,7 @@
 body {
   padding: 0 !important;
   margin: 0 !important;
-  font-family: "Allerta", sans-serif;
+  font-family: "Aller", sans-serif;
 }
 
 #alertu {
