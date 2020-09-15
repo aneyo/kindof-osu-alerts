@@ -19,7 +19,8 @@ That shouldn't be _that_ hard
 ### **4**. Copy code inside the `files` to corresponding **tabs**
 
 - [`events.html`](https://github.com/aneyo/kindof-osu-alerts/blob/master/events.html) → **HTML**
-- [`events.css`](https://github.com/aneyo/kindof-osu-alerts/blob/master/events.css) or [`minified/events.min.css`](https://github.com/aneyo/kindof-osu-alerts/blob/master/minified/events.min.css) → **CSS**
+- [`events.css`](https://github.com/aneyo/kindof-osu-alerts/blob/master/events.css) or [`minified/events.min.css`](https://github.com/aneyo/kindof-osu-alerts/blob/master/minified/events.min.css) → **CSS**<br>
+... or just paste `@import url(https://raw.githubusercontent.com/aneyo/sl-osu-alerts-list/master/minified/events.min.css);`
 - [`events.js`](https://github.com/aneyo/kindof-osu-alerts/blob/master/events.js) or [`minified/events.min.js`](https://github.com/aneyo/kindof-osu-alerts/blob/master/minified/events.min.js) → **JS**
 
 _You can use .min versions if you want to save some bytes :^)_
