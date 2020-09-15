@@ -1,3 +1,5 @@
+![](./example.gif)
+
 ## How to use
 
 ### **1**. Log in your [StreamLabs](https://streamlabs.com) account
